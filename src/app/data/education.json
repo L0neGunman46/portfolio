@@ -1,0 +1,41 @@
+{
+  "education": [
+    {
+      "name": "University of Bath",
+      "href": "https://www.bath.ac.uk/",
+      "title": "Msc in Computer Science",
+      "logo": "/uni_bath_logo.jpeg",
+      "start": "Sep 2024",
+      "end": "Aug 2025",
+      "description": [
+        "Graduated with honors",
+        "Took part in Hackathon organised in University",
+        "Part of the Bath computer society"
+      ],
+      "links": [
+        {
+          "name": "Charteruse Serious Game",
+          "href": "https://github.com/Chartreuse-uni/chartreuse",
+          "icon": "globe"
+        }
+      ]
+    },
+    {
+      "name": "Nitte Meenakshi Institute of Technology(VTU)",
+      "href": "https://nitte.edu.in/nmit/",
+      "title": "B.E in Aeronautical Engineering",
+      "logo": "/nmit.png",
+      "start": "Aug 2015",
+      "end": "May 2019",
+      "description":[
+          "Graduated with distinction",
+          "Primarily focuesed on Computational Fluid Dynamics."
+      ],
+      "links":[{
+        "name":"Design Fabrication  and subsonic flow analysis of blended wing body",
+        "href":"https://www.academia.edu/42076473/Design_Fabrication_and_Subsonic_Flow_Analysis_of_a_Blended_Wing_Body",
+        "icon":"globe"
+      }]
+    }
+  ]
+}

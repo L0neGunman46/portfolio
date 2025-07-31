@@ -1,0 +1,19 @@
+{
+  "career": [
+    {
+      "name": "Smart Food Safe Pvt.Ltd",
+      "href": "https://smartfoodsafe.com/",
+      "title": "Software Engineer",
+      "logo": "/smartfoodsafe_logo.jpeg",
+      "start": "Jun 2022",
+      "end":"Sep 2024",
+      "description": [
+        "Developed and maintained high performance web applications built on the MERN stack.",
+        "Built reusable components and libraries for future use.", 
+        "Used CI/CD pipelined to automate testing and deployment of the applications"
+      ]
+    }
+  ]
+}
+
+

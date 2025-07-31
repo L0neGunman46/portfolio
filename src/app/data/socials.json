@@ -1,0 +1,19 @@
+{
+  "socials": [
+    {
+      "name": "LinkedIn",
+      "href": "https://www.linkedin.com/in/akshaysg46/",
+      "icon": "linkedin"
+    },
+    {
+      "name": "GitHub",
+      "href": "https://github.com/L0neGunman46",
+      "icon": "github"
+    },
+    {
+      "name": "Email",
+      "href": "mailto:akshay.sg@gmail.com",
+      "icon": "mail"
+    }
+  ]
+}

@@ -1,7 +1,11 @@
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import Providers from "@/components/Providers";
+import { cn } from "@/libs/utils";
 import "@/styles/globals.css";
 
 import { type Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Geist, Calistoga, Inter } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -14,12 +18,38 @@ const geist = Geist({
   variable: "--font-geist-sans",
 });
 
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  weight: ["400", "500", "600", "700"],
+});
+const calistoga = Calistoga({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  weight: ["400"],
+});
+
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geist.variable}`}>
-      <body>{children}</body>
+   <html lang="en">
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          inter.variable,
+          calistoga.variable,
+        )}
+      >
+        <Providers>
+          <Header />
+          <div className="mx-auto flex max-w-3xl flex-col px-8">
+            <main className="grow">{children}</main>
+          </div>
+          <Footer />
+        </Providers>
+      </body>
     </html>
   );
 }
