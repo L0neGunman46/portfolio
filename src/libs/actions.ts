@@ -18,12 +18,12 @@ export async function sendEmail(data: ContactFormInputs) {
   try {
     const { name, email, message } = result.data;
     const { data, error } = await resend.emails.send({
-      from: `tedawf.com <contact@tedawf.com>`,
-      to: "hello@tedawf.com",
+      from: `akshaysg.com <contact@akshaysg.com>`,
+      to: "akshay.sg55@gmail.com",
       replyTo: [email],
       cc: [email],
-      subject: `New message from ${name}!`,
-      text: `Name:\n${name}\n\nEmail:\n${email}\n\nMessage:\n${message}`,
+      subject: `A New message has arrived from: ${name}!`,
+      text: `Name:\n${name}\n\nEmail:\n${email}\n\nReason for contact:\n${message}`,
     });
 
     if (!data || error) {
