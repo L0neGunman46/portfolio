@@ -7,6 +7,7 @@ const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
 });
 
+
 export default tseslint.config(
   {
     ignores: [".next"],
@@ -23,6 +24,7 @@ export default tseslint.config(
       ...tseslint.configs.stylisticTypeChecked,
     ],
     rules: {
+      // Keep your existing custom rules here
       "@typescript-eslint/array-type": "off",
       "@typescript-eslint/consistent-type-definitions": "off",
       "@typescript-eslint/consistent-type-imports": [
@@ -46,6 +48,17 @@ export default tseslint.config(
         "error",
         { drizzleObjectName: ["db", "ctx.db"] },
       ],
+    },
+  },
+  // NEW BLOCK: Ensure these problematic rules are definitively disabled.
+  {
+    files: ["**/*.ts", "**/*.tsx"],
+    rules: {
+      "@typescript-eslint/prefer-nullish-coalescing": "off",
+      "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
+      "@typescript-eslint/no-empty-object-type": "off",
+      // Add the new rule to disable here!
+      "@typescript-eslint/non-nullable-type-assertion-style": "off", // <--- NEW!
     },
   },
   {

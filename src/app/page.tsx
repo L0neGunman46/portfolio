@@ -37,7 +37,7 @@ export default async function HomePage() {
           </h1>
 
           <p className="mt-2 text-sm font-medium whitespace-nowrap sm:text-base">
-            I'm a {age} yo Computer Science Graduate.
+            I&apos;m a {age} yo Computer Science Graduate.
           </p>
           <p className="mt-4 max-w-sm text-sm text-balance">
             <span className={greyStr}>
