@@ -1,0 +1,37 @@
+{
+  "skills": [
+    {
+      "name": "typescript",
+      "icon": "/typescript.svg",
+      "label": "TypeScript"
+    },
+    {
+      "name": "javascript",
+      "icon": "/javascript.svg",
+      "label": "Javascript"
+    },{
+      "name": "python",
+      "icon": "/python.svg",
+      "label": "Python"
+    },{
+      "name": "react",
+      "icon": "/react.svg",
+      "label": "Reactjs"
+    },
+    {
+      "name": "sqlite",
+      "icon": "/sqlite.svg",
+      "label": "SQlite"
+    },
+    {
+      "name": "mongodb",
+      "icon": "/mongo.svg",
+      "label": "MongoDB"
+    },
+    {
+      "name": "rl",
+      "icon": "/ai.svg",
+      "label": "Reinforcement Learning"
+    }
+  ]
+}

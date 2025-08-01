@@ -1,7 +1,9 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Providers from "@/components/Providers";
+import { TooltipProvider } from "@/components/ui/Tooltip";
 import { cn } from "@/libs/utils";
+
 import "@/styles/globals.css";
 
 import { type Metadata } from "next";
@@ -29,15 +31,14 @@ const calistoga = Calistoga({
   weight: ["400"],
 });
 
-
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-   <html lang="en">
+    <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "bg-background min-h-screen font-sans antialiased",
           inter.variable,
           calistoga.variable,
         )}
@@ -45,7 +46,9 @@ export default function RootLayout({
         <Providers>
           <Header />
           <div className="mx-auto flex max-w-3xl flex-col px-8">
-            <main className="grow">{children}</main>
+            <main className="grow">
+              <TooltipProvider>{children}</TooltipProvider>
+            </main>
           </div>
           <Footer />
         </Providers>

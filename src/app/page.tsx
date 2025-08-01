@@ -7,6 +7,7 @@ import { ArrowRightIcon, FileDown } from "lucide-react";
 import Experience from "@/components/Experience";
 import LinkWithIcon from "@/components/LinkWithIcon";
 import Projects from "@/components/Projects";
+import SkillsComp from "@/components/SkillsComp";
 // import Posts from "@/components/Posts";
 // import { getPosts } from "@/libs/posts";
 
@@ -73,6 +74,14 @@ export default async function HomePage() {
         </div>
       </section>
       <Experience />
+
+      {/* Skills Section */}
+      <section className="flex flex-col gap-8">
+        <div className="flex flex-start">
+          <h2 className="title text-2xl sm:text-3xl">Skills</h2>
+        </div>
+      <SkillsComp/>
+      </section>
       {/* Featured projects */}
 
       <section className="flex flex-col gap-8">

@@ -20,6 +20,14 @@ const iconLink = z.object({
 });
 export type IconLink = z.infer<typeof iconLink>;
 
+const skillLogo = z.object({
+  name: z.string(),
+  icon: z.string(),
+  label: z.string(),
+});
+export const skillLogoSchema = z.object({ skills: z.array(skillLogo) });
+export type SkillLogo = z.infer<typeof skillLogo>;
+
 const project = z.object({
   name: z.string(),
   description: z.string(),
