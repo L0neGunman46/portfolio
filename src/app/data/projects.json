@@ -1,0 +1,23 @@
+{
+  "projects": [
+    {
+      "name": "Portfolio",
+      "description": "Minimalistic portfolio website built with Next.js and TailwindCSS.",
+      "href": "https://akshaysg.com",
+      "image": "",
+      "tags": ["nextjs", "tailwindcss", "typescript"],
+      "links": [
+        {
+          "name": "Website",
+          "href": "https://akshaysg.com",
+          "icon": "globe"
+        },
+        {
+          "name": "Source",
+          "href": "https://github.com/L0neGunman46/portfolio",
+          "icon": "github"
+        }
+      ]
+    }
+  ]
+}

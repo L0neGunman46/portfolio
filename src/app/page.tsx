@@ -1,37 +1,113 @@
 import Link from "next/link";
+import Image from "next/image";
+// import path from "path";
+import Socials from "@/components/Socials";
+import { Button } from "@/components/ui/Button";
+import { ArrowRightIcon, FileDown } from "lucide-react";
+import Experience from "@/components/Experience";
+import LinkWithIcon from "@/components/LinkWithIcon";
+import Projects from "@/components/Projects";
+import SkillsComp from "@/components/SkillsComp";
+// import Posts from "@/components/Posts";
+// import { getPosts } from "@/libs/posts";
 
-export default function HomePage() {
+const DOB = 1997;
+// const blogDirectory = path.join(process.cwd(), "content");
+const DISPLIMIT = 2;
+
+export default async function HomePage() {
+  // const posts = await getPosts(blogDirectory, LIMIT);
+  const age = new Date().getFullYear() - DOB;
+  const greyStr= "bg-gradient-to-r from-black via-gray-900 to-black bg-clip-text  text-transparent sm:text-base dark:from-slate-600 dark:via-slate-400 dark:to-slate-600";
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-      <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
-        <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-          Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
-        </h1>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
-          <Link
-            className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-            href="https://create.t3.gg/en/usage/first-steps"
-            target="_blank"
-          >
-            <h3 className="text-2xl font-bold">First Steps →</h3>
-            <div className="text-lg">
-              Just the basics - Everything you need to know to set up your
-              database and authentication.
-            </div>
-          </Link>
-          <Link
-            className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-            href="https://create.t3.gg/en/introduction"
-            target="_blank"
-          >
-            <h3 className="text-2xl font-bold">Documentation →</h3>
-            <div className="text-lg">
-              Learn more about Create T3 App, the libraries it uses, and how to
-              deploy it.
-            </div>
-          </Link>
+    <article className="mt-8 flex flex-col gap-16 pb-16">
+      <section className="flex flex-col items-start gap-8 md:flex-row md:items-center md:justify-between">
+        <Image
+          className="rounded-4xl"
+          src="/profile_pic.jpeg"
+          alt="Photo of Akshay"
+          width={200}
+          height={200}
+          priority
+        />
+        <div className="flex max-w-[300px] flex-col items-start sm:max-w-full">
+          <h1 className="title text-4xl text-balance sm:text-5xl">
+            Akshay S Gaekwad
+          </h1>
+
+          <p className="mt-2 text-sm font-medium whitespace-nowrap sm:text-base">
+            I'm a {age} yo Computer Science Graduate.
+          </p>
+          <p className="mt-4 max-w-sm text-sm text-balance">
+            <span className={greyStr}>
+               Coding
+            </span> {" "}
+            💻 |{" "}
+            <span className={greyStr}>
+               Backend
+            </span>{" "}
+             ⚙️ | {" "}
+            <span className={greyStr}>
+               Reinforcement Learning
+            </span> {" "} 🧠
+          </p>
+
+          <section className="mt-6 flex flex-wrap items-center gap-4">
+            {/* <Link href="/resume.pdf" target="_blank">
+              <Button variant="outline">
+                <span className="font-semibold">Resume</span>
+                <FileDown className="ml-2 size-5" />
+              </Button>
+            </Link> */}
+            <Link href="/resume.pdf" target="_blank">
+              <Button
+                variant="outline"
+                className="animated-border-button bg-background hover:bg-background/80 transition-colors"
+              >
+                <span className="relative z-10 font-semibold">Resume</span>
+                <FileDown className="relative z-10 ml-2 size-5" />
+              </Button>
+            </Link>
+            <Socials />
+          </section>
         </div>
-      </div>
-    </main>
+      </section>
+      <Experience />
+
+      {/* Skills Section */}
+      <section className="flex flex-col gap-8">
+        <div className="flex flex-start">
+          <h2 className="title text-2xl sm:text-3xl">Skills</h2>
+        </div>
+      <SkillsComp/>
+      </section>
+      {/* Featured projects */}
+
+      <section className="flex flex-col gap-8">
+        <div className="flex justify-between">
+          <h2 className="title text-2xl sm:text-3xl">Featured Projects</h2>
+          <LinkWithIcon
+            href=""
+            position="right"
+            icon={<ArrowRightIcon className="size-5" />}
+            text="view more"
+          />
+        </div>
+        <Projects limit={DISPLIMIT} />
+      </section>
+
+      {/* <section className="flex flex-col gap-8">
+        <div className="flex justify-between">
+          <h2 className="title text-3xl">Recent Posts</h2>
+          <LinkWithIcon
+            href=""
+            position="right"
+            icon={<ArrowRightIcon className="size-5" />}
+            text="view more"
+          />
+        </div>
+      </section> */}
+    </article>
   );
 }

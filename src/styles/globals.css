@@ -1,6 +1,237 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* Color variables */
+  --color-background: oklch(100% 0 0);
+  --color-foreground: oklch(15.86% 0.014 285.75);
+  --color-card: oklch(100% 0 0);
+  --color-card-foreground: oklch(15.86% 0.014 285.75);
+  --color-popover: oklch(100% 0 0);
+  --color-popover-foreground: oklch(15.86% 0.014 285.75);
+  --color-primary: oklch(25.32% 0.02 285.75);
+  --color-primary-foreground: oklch(98.04% 0.006 285.75);
+  --color-secondary: oklch(95.69% 0.006 285.75);
+  --color-secondary-foreground: oklch(25.32% 0.02 285.75);
+  --color-muted: oklch(95.69% 0.006 285.75);
+  --color-muted-foreground: oklch(52.55% 0.015 285.75);
+  --color-accent: oklch(95.69% 0.006 285.75);
+  --color-accent-foreground: oklch(25.32% 0.02 285.75);
+  --color-destructive: oklch(62.8% 0.257 29.23);
+  --color-destructive-foreground: oklch(98.04% 0.006 285.75);
+  --color-border: oklch(89.8% 0.005 285.75);
+  --color-input: oklch(89.8% 0.005 285.75);
+  --color-ring: oklch(15.86% 0.014 285.75);
+
+  /* Chart colors */
+  --color-chart-1: oklch(70.75% 0.131 22.22);
+  --color-chart-2: oklch(60.27% 0.1 180.96);
+  --color-chart-3: oklch(48.56% 0.053 213.8);
+  --color-chart-4: oklch(74.8% 0.15 83.87);
+  --color-chart-5: oklch(75.22% 0.167 34.39);
+
+  /* Syntax highlighting colors */
+  --color-sh-identifier: #354150;
+  --color-sh-keyword: #f47067;
+  --color-sh-string: #00a99a;
+  --color-sh-class: #8d85ff;
+  --color-sh-property: #4e8fdf;
+  --color-sh-entity: #6eafad;
+  --color-sh-jsxliterals: #bf7db6;
+  --color-sh-sign: #8996a3;
+  --color-sh-comment: #a19595;
+
+  /* Border radius */
+  --radius: 0.5rem;
+}
+
+/* Dark mode theme overrides using @layer theme */
+
+@layer theme {
+  .dark {
+    --color-background: oklch(15.86% 0.014 285.75);
+    --color-foreground: oklch(98.04% 0.006 285.75);
+    --color-card: oklch(15.86% 0.014 285.75);
+    --color-card-foreground: oklch(98.04% 0.006 285.75);
+    --color-popover: oklch(15.86% 0.014 285.75);
+    --color-popover-foreground: oklch(98.04% 0.006 285.75);
+    --color-primary: oklch(98.04% 0.006 285.75);
+    --color-primary-foreground: oklch(25.32% 0.02 285.75);
+    --color-secondary: oklch(22.89% 0.018 285.75);
+    --color-secondary-foreground: oklch(98.04% 0.006 285.75);
+    --color-muted: oklch(22.89% 0.018 285.75);
+    --color-muted-foreground: oklch(65.69% 0.013 285.75);
+    --color-accent: oklch(22.89% 0.018 285.75);
+    --color-accent-foreground: oklch(98.04% 0.006 285.75);
+    --color-destructive: oklch(48.42% 0.204 27.33);
+    --color-destructive-foreground: oklch(98.04% 0.006 285.75);
+    --color-border: oklch(22.89% 0.018 285.75);
+    --color-input: oklch(22.89% 0.018 285.75);
+    --color-ring: oklch(83.06% 0.007 285.75);
+
+    /* Dark mode chart colors */
+    --color-chart-1: oklch(63.18% 0.18 258.96);
+    --color-chart-2: oklch(65.69% 0.15 162.68);
+    --color-chart-3: oklch(72.06% 0.15 60.85);
+    --color-chart-4: oklch(74.22% 0.15 302.71);
+    --color-chart-5: oklch(70.75% 0.18 342.55);
+
+    /* Dark mode syntax highlighting */
+    --color-sh-class: #4c97f8;
+    --color-sh-identifier: white;
+    --color-sh-keyword: #f47067;
+    --color-sh-string: #0fa295;
+  }
+}
+
+@layer base {
+  :root {
+    --gradient-start: theme(colors.slate.500);
+    --gradient-middle: theme(colors.slate.300);
+    --gradient-end: theme(colors.slate.500);
+  }
+
+  .dark {
+    --gradient-start: theme(colors.slate.400);
+    --gradient-middle: theme(colors.slate.200);
+    --gradient-end: theme(colors.slate.400);
+  }
+}
+/* Base styles using modern approach */
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  @keyframes border-rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+/* Custom utilities using @utility directive (v4 approach) */
+@utility title {
+  font-family: theme(--font-serif);
+  font-size: 3rem;
+  line-height: 1;
+  letter-spacing: 0.025em;
+  text-decoration-line: underline;
+  text-decoration-color: color-mix(
+    in srgb,
+    var(--color-border) 75%,
+    transparent
+  );
+  text-decoration-thickness: 2px;
+  text-align: center;
+}
+
+@utility link {
+  color: var(--color-muted-foreground);
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+
+  &:hover {
+    color: var(--color-foreground);
+  }
+}
+@utility animate-border-rotate {
+  animation: border-rotate 4s linear infinite;
+}
+
+/* Component styles */
+@layer components {
+  .prose pre {
+    overflow-x: auto;
+    border-radius: var(--radius);
+    background-color: var(--color-accent);
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .prose pre code {
+    padding: 0;
+    line-height: 1.75;
+  }
+
+  .prose code {
+    border-radius: var(--radius);
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
+  }
+
+  .prose code span {
+    font-weight: 500;
+  }
+
+  .input-error {
+    margin-left: 0.25rem;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: rgb(251 113 133);
+  }
+}
+/* Add this to your existing CSS */
+@layer components {
+  .animated-border-button {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .animated-border-button::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: radial-gradient(
+      circle at 50% 50%,
+      #c7d2fe 0%,
+      #818cf8 20%,
+      #4f46e5 40%,
+      #3730a3 60%,
+      white 80%,
+      white 100%
+    );
+    animation: rotate 4s linear infinite;
+  }
+
+  .animated-border-button::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 3px;
+    top: 3px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background: var(--color-background);
+    border-radius: calc(var(--radius) - 2px);
+  }
+
+  @keyframes rotate {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
 }
