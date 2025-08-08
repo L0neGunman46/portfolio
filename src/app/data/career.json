@@ -8,12 +8,16 @@
       "start": "Jun 2022",
       "end":"Sep 2024",
       "description": [
-        "Developed and maintained high performance web applications built on the MERN stack.",
-        "Built reusable components and libraries for future use.", 
-        "Used CI/CD pipelined to automate testing and deployment of the applications"
+        "Owned the design and development of three core modules in a multi-tenant MERN platform, enhancing risk-based scoring and digital specifications workflows.",
+        "Shipped a MERN-stack application featuring authentication, reusable UI components, and a digital signature workflow, utilizing JavaScript, React, Node.js, and MongoDB. ", 
+        "Deployed applications on AWS EC2 with S3 assets, employing CI/CD practices through Jenkins to streamline development cycles.",
+        "Optimized data-heavy table load times from ~10s to ~3s and reduced API latency from 4–5s to ~1s through query tuning, payload reduction, and caching strategies."
       ]
     }
   ]
 }
+
+
+
 
 
