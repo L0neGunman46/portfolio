@@ -45,7 +45,7 @@ export default async function HomePage() {
             </span> {" "}
             💻 |{" "}
             <span className={greyStr}>
-               Backend
+               Software Engineer
             </span>{" "}
              ⚙️ | {" "}
             <span className={greyStr}>
