@@ -75,7 +75,7 @@ export default async function HomePage() {
             text="view more"
           />
         </div>
-        {/* <Projects limit={DISPLIMIT} /> */}
+        <Projects limit={DISPLIMIT} />
       </section>
 
       {/* <section className="flex flex-col gap-8">
