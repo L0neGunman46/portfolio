@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@property --border-angle {
+    inherits: false;
+    initial-value: 0deg;
+    syntax: '<angle>';
+}
+
 @theme {
   /* Color variables */
   --color-background: oklch(100% 0 0);
@@ -42,8 +48,15 @@
 
   /* Border radius */
   --radius: 0.5rem;
+
+  --animate-border: border 4s linear infinite;
 }
 
+@keyframes border {
+  to {
+    --border-angle: 360deg;
+  }
+}
 /* Dark mode theme overrides using @layer theme */
 
 @layer theme {

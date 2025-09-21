@@ -1,24 +1,22 @@
-import Link from "next/link";
 import Image from "next/image";
 // import path from "path";
 import Socials from "@/components/Socials";
-import { Button } from "@/components/ui/Button";
 import { ArrowRightIcon, FileDown } from "lucide-react";
 import Experience from "@/components/Experience";
 import LinkWithIcon from "@/components/LinkWithIcon";
 import Projects from "@/components/Projects";
 import SkillsComp from "@/components/SkillsComp";
+import ResumeButton from "@/components/ui/ResumeButton";
 // import Posts from "@/components/Posts";
 // import { getPosts } from "@/libs/posts";
 
-const DOB = 1997;
 // const blogDirectory = path.join(process.cwd(), "content");
 const DISPLIMIT = 2;
 
 export default async function HomePage() {
   // const posts = await getPosts(blogDirectory, LIMIT);
-  const age = new Date().getFullYear() - DOB;
-  const greyStr= "bg-gradient-to-r from-black via-gray-900 to-black bg-clip-text  text-transparent sm:text-base dark:from-slate-600 dark:via-slate-400 dark:to-slate-600";
+  const greyStr =
+    "bg-gradient-to-r from-black via-gray-900 to-black bg-clip-text  text-transparent sm:text-base dark:from-slate-600 dark:via-slate-400 dark:to-slate-600";
 
   return (
     <article className="mt-8 flex flex-col gap-16 pb-16">
@@ -37,20 +35,11 @@ export default async function HomePage() {
           </h1>
 
           <p className="mt-2 text-sm font-medium whitespace-nowrap sm:text-base">
-            I&apos;m a {age} yo Computer Science Graduate.
+            Computer Science Graduate.
           </p>
           <p className="mt-4 max-w-sm text-sm text-balance">
-            <span className={greyStr}>
-               Coding
-            </span> {" "}
-            💻 |{" "}
-            <span className={greyStr}>
-               Software Engineer
-            </span>{" "}
-             ⚙️ | {" "}
-            <span className={greyStr}>
-               Reinforcement Learning
-            </span> {" "} 🧠
+            <span className={greyStr}>Software Engineer</span> 💻 |{" "}
+            <span className={greyStr}>Machine Learning</span> 🧠
           </p>
 
           <section className="mt-6 flex flex-wrap items-center gap-4">
@@ -60,15 +49,7 @@ export default async function HomePage() {
                 <FileDown className="ml-2 size-5" />
               </Button>
             </Link> */}
-            <Link href="/resume.pdf" target="_blank">
-              <Button
-                variant="outline"
-                className="animated-border-button bg-background hover:bg-background/80 transition-colors"
-              >
-                <span className="relative z-10 font-semibold">Resume</span>
-                <FileDown className="relative z-10 ml-2 size-5" />
-              </Button>
-            </Link>
+            <ResumeButton />
             <Socials />
           </section>
         </div>
@@ -77,10 +58,10 @@ export default async function HomePage() {
 
       {/* Skills Section */}
       <section className="flex flex-col gap-8">
-        <div className="flex flex-start">
+        <div className="flex-start flex">
           <h2 className="title text-2xl sm:text-3xl">Skills</h2>
         </div>
-      <SkillsComp/>
+        <SkillsComp />
       </section>
       {/* Featured projects */}
 
