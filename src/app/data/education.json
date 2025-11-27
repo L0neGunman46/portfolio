@@ -8,14 +8,26 @@
       "start": "Sep 2024",
       "end": "Aug 2025",
       "description": [
-        "Dissertation on Reinforcement leaning.",
-        "Took part in Hackathon organised in University"
+        "Graduated with honours from the department of computer science",
+        "Developed a Deep Q-learning agent for playing Pac-Man, Flight management CLI application with python and a command line game using Java.",
+        "Thesis topic primarily on Reinforcement learning a paradigm of machine learning. Focused on unsupervised skill discover with mutual information. Tested on Mujoco Gymnasium environments."
+
       ],
       "links": [
         {
           "name": "Charteruse Serious Game",
           "href": "https://github.com/Chartreuse-uni/chartreuse",
           "icon": "globe"
+        },
+        {
+          "name":"Thesis Code, for METRA using Mujoco environments",
+          "href":"https://github.com/L0neGunman46/metra_unsupervisedLearning",
+          "icon":"globe"
+        },
+        {
+          "name":"Contrastive Succesive Features, Thesis",
+          "href":"https://github.com/L0neGunman46/metra_unsupervisedLearning",
+          "icon":"globe"
         }
       ]
     },
@@ -27,8 +39,10 @@
       "start": "Aug 2015",
       "end": "May 2019",
       "description":[
-          "Graduated with distinction",
-          "Primarily focuesed on Computational Fluid Dynamics."
+          "Graduated with distinction in Aeronautical Engineering",
+          "Primarily focuesed on Computational Fluid Dynamics and aerodynamics.",
+          "Primary projects include analysing airflow on a 65 deg swept delta wing, Airflow analysis on turbine blades.",
+          "Thesis was the analysis of a turbine blade of a Kaveri Engine under development at Gas turbie Research establishment India."
       ],
       "links":[{
         "name":"Design Fabrication  and subsonic flow analysis of blended wing body",
