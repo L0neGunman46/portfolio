@@ -4,7 +4,7 @@
       "name": "Portfolio",
       "description": "Minimalistic portfolio website built with Next.js and TailwindCSS.",
       "href": "https://akshaysg.com",
-      "image": "",
+      "image": "/projectsImgs/webDesign.png",
       "tags": ["nextjs", "tailwindcss", "typescript"],
       "links": [
         {
@@ -15,6 +15,20 @@
         {
           "name": "Source",
           "href": "https://github.com/L0neGunman46/portfolio",
+          "icon": "github"
+        }
+      ]
+    },
+    {
+      "name": "Sudoku Solver",
+      "description": "A very fast Sudoku Solver written in python, capable of solving very hard Sudoku puzzles almost instantaneously",
+      "href": "https://akshaysg.com",
+      "image": "/projectsImgs/sudoImg1.png",
+      "tags": ["python", "ai", "dfs"],
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/L0neGunman46/sudoku_solver",
           "icon": "github"
         }
       ]
