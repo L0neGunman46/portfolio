@@ -1,6 +1,25 @@
 {
   "projects": [
     {
+      "name": "Reac-Docs",
+      "description": "A rich format text editor with real-time collaborative editing, user tagging, and support for organizational and personal accounts.",
+      "href": "https://reac-docs.vercel.app/",
+      "image": "/projectsImgs/reacDocs.png",
+      "tags": ["nextjs", "typescript", "convex", "clerk", "liveblocks"],
+      "links": [
+        {
+          "name": "Website",
+          "href": "https://reac-docs.vercel.app/",
+          "icon": "globe"
+        },
+        {
+          "name": "Source",
+          "href": "https://github.com/L0neGunman46/reac-docs",
+          "icon": "github"
+        }
+      ]
+    },
+    {
       "name": "Portfolio",
       "description": "Minimalistic portfolio website built with Next.js and TailwindCSS.",
       "href": "https://akshaysg.com",
