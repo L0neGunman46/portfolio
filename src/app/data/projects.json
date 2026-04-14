@@ -1,6 +1,41 @@
 {
   "projects": [
     {
+      "name": "GitPReview",
+      "description": "AI-powered GitHub PR review tool that uses RAG over your codebase to deliver context-aware code analysis, rather than generic feedback.",
+      "href": "https://github.com/L0neGunman46/gitPReview",
+      "image": "/projectsImgs/gitpreview.png",
+      "tags": [
+        "TanstackStart",
+        "PineCone",
+        "Prisma",
+        "Better Auth",
+        "Octokit",
+        "ShadCn UI"
+      ],
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/L0neGunman46/gitPReview",
+          "icon": "github"
+        }
+      ]
+    },
+    {
+      "name": "Email Spam filter",
+      "description": "A Naive Bayes email spam classifier in Go trained on the Enron dataset, using log-probability scoring to avoid floating point underflow.",
+      "href": "https://github.com/L0neGunman46/email-spam-filter",
+      "image": "/projectsImgs/spam_email.png",
+      "tags": ["go", "spam-filter"],
+      "links": [
+        {
+          "name": "Source",
+          "href": "https://github.com/L0neGunman46/email-spam-filter",
+          "icon": "github"
+        }
+      ]
+    },
+    {
       "name": "Reac-Docs",
       "description": "A rich format text editor with real-time collaborative editing, user tagging, and support for organizational and personal accounts.",
       "href": "https://reac-docs.vercel.app/",
