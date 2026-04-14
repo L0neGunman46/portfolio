@@ -1,7 +1,6 @@
-import Image from "next/image";
 // import path from "path";
 import Socials from "@/components/Socials";
-import { ArrowRightIcon, FileDown } from "lucide-react";
+import { ArrowRightIcon } from "lucide-react";
 import Experience from "@/components/Experience";
 import LinkWithIcon from "@/components/LinkWithIcon";
 import Projects from "@/components/Projects";
@@ -22,9 +21,8 @@ export default async function HomePage() {
       <section className="flex items-start gap-8 md:flex-row md:items-center md:justify-between">
         <div className="flex max-w-[300px] flex-col items-start sm:max-w-full">
           <h1 className="title text-4xl text-balance sm:text-5xl">
-            Hi, I'm Akshay S Gaekwad
+            Hi!, I&apos;m Akshay S Gaekwad
           </h1>
-
           <p className="mt-2 text-sm font-medium whitespace-break-spaces sm:text-base">
             MSc in CS, built everything from RL agents to CLI tools to SaaS
             dashboards. I just like understanding complex problems and then ship
