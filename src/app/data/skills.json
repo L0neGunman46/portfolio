@@ -2,36 +2,78 @@
   "skills": [
     {
       "name": "typescript",
-      "icon": "/typescript.svg",
+      "icon": "/skillImgs/typescript.svg",
       "label": "TypeScript"
     },
     {
-      "name": "javascript",
-      "icon": "/javascript.svg",
-      "label": "Javascript"
-    },{
       "name": "python",
-      "icon": "/python.svg",
+      "icon": "/skillImgs/python.svg",
       "label": "Python"
-    },{
+    },
+     {
+      "name": "golang",
+      "icon": "/skillImgs/golang.svg",
+      "label": "Go"
+    },
+    {
       "name": "react",
-      "icon": "/react.svg",
+      "icon": "/skillImgs/react.svg",
       "label": "Reactjs"
     },
     {
       "name": "sqlite",
-      "icon": "/sqlite.svg",
+      "icon": "/skillImgs/sqlite.svg",
       "label": "SQlite"
     },
     {
       "name": "mongodb",
-      "icon": "/mongo.svg",
+      "icon": "/skillImgs/mongo.svg",
       "label": "MongoDB"
     },
     {
-      "name": "rl",
-      "icon": "/ai.svg",
-      "label": "Reinforcement Learning"
+      "name": "nextJS",
+      "icon": "/skillImgs/nextjs.svg",
+      "label": "NextJs"
+    },
+    {
+      "name": "prisma",
+      "icon": "skillImgs/prisma.svg",
+      "label": "Prisma"
+    },
+    {
+      "name": "redis",
+      "icon": "skillImgs/redis.svg",
+      "label": "Redis"
+    },
+    {
+      "name": "jenkins",
+      "icon": "skillImgs/jenkins.svg",
+      "label": "Jenkins"
+    },
+    {
+      "name": "aws",
+      "icon": "skillImgs/aws.svg",
+      "label": "AWS"
+    },
+    {
+      "name": "claude",
+      "icon": "skillImgs/claude.svg",
+      "label": "Claude Code"
+    },
+    {
+      "name": "graphql",
+      "icon": "skillImgs/graphql.svg",
+      "label": "GraphQL"
+    },
+    {
+      "name": "jest",
+      "icon": "skillImgs/jest.svg",
+      "label": "Jest"
+    },
+    {
+      "name":"docker",
+      "icon":"skillImgs/docker.svg",
+      "label":"Docker"
     }
   ]
 }

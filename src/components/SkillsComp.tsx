@@ -18,7 +18,7 @@ export default function SkillsComp() {
       {skills.map((skill) => (
         <Badge
           key={skill.name}
-          className="bg-card text-card-foreground border-border hover:bg-accent hover:text-accent-foreground flex h-full w-full items-center justify-center gap-2 rounded-md border px-3 py-2 text-sm shadow-sm transition-colors duration-200"
+          className="bg-card text-card-foreground border-border hover:bg-accent hover:text-accent-foreground flex h-full w-full items-center justify-center gap-2 rounded-md border px-3 py-2 text-sm shadow-sm transition-colors duration-200 cursor-pointer"
         >
           <div className="flex min-w-0 items-center gap-2">
             <Image
